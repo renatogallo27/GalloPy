@@ -55,7 +55,7 @@ class Retta:
 
     def m(self):
         if self.__b==0:
-            return f"L'equazione è parallela all'asse delle ordinate"
+            return f"La retta è parallela all'asse delle ordinate"
         else:
             return f"m={-self.__a/self.__b}"
 
@@ -68,9 +68,9 @@ class Retta:
             return f"Le due rette non hanno un punto di intersezione perché sono parallele"
 
         elif m1 == self.m and (-self.__c/self.__b) == (-self.__c1/self.__b1):
-            return f"Le due retto sono coincidenti e quindi hanno tutti i punti in comune"
+            return f"Le due rette sono coincidenti e quindi hanno tutti i punti in comune"
 
         else:
-            return f"Le due rette sono incidenti nel punto di cordinate: {((-self.__c / self.__b)+(self.__c1 / self.__b1))/((-self.__b / self.__a)+(self.__b1 / self.__a1))}, {((-self.__b / self.__c)+(self.__b1 / self.__c1))/((-self.__b / self.__a)+(self.__b1 / self.__a1))}"
+            return f"Le due rette sono incidenti nel punto di coordinate: {((-self.__c / self.__b)+(self.__c1 / self.__b1))/((-self.__b / self.__a)+(self.__b1 / self.__a1))}, {((-self.__b / self.__c)+(self.__b1 / self.__c1))/((-self.__b / self.__a)+(self.__b1 / self.__a1))}"
 
    
