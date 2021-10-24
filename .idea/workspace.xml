@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76ae0ebd-ecb1-4e91-a14f-dbbbfd2fa7bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/coniche/Gruppo (Gallo-Corbo-Pala-Carotenuto, Minichiello, Fulgione).md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coniche/Gruppo (Gallo-Corbo-Pala-Carotenuto).md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coniche/Gruppo (Gallo-Corbo-Pala-Carotenuto, Minichiello, Fulgione).md" beforeDir="false" afterPath="$PROJECT_DIR$/coniche/Gruppo (Gallo-Corbo-Pala-Carotenuto, Minichiello, Fulgione).md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coniche/retta.py" beforeDir="false" afterPath="$PROJECT_DIR$/coniche/retta.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +48,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

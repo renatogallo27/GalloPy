@@ -7,13 +7,19 @@ class Retta:
             self.__punti = []
             self.__m = p4
 
-   #Stiamo avendo difficoltà nella realizzazione di questo metodo
-    def __init__(self, p1 = (x, y), p2 = (x_2, y_2), x = None, y = None, x_2 = None, y_2 = None, retta = None):
-        retta = "y"= ()
 
+    def __init__(self, x, y, x_2, y_2, equatio):
+        self.__x = x
+        self.__y = y
+        self.__x_2 = x_2
+        self.__y_2 = y_2
 
+    punto1 = Retta(self.__x, self.__y)
+    punto2 = Retta(self.__x_2, self.__y_2)
 
-
+    def get_retta:
+        if punto1 != 0 and punto2 != 0:
+            return f'Equazione della retta: y=, {((self.__y_2-self.__y)/(self.__x_2-self.__x)*self.__x)}x + {(((self.__y_2-self.__y)/(self.__x_2-self.__x)*self.__x)-self.__y)}'
 
     def getA(self):
         return self.__a
@@ -65,7 +71,7 @@ class Retta:
             self.__m = -self.__a/self.__b
             return self.__m
 
-    def intersezione(self, a1, b1, c1, m1):
+    def intersezione(self, a1, b1, c1, m1, intersezione = None):
         self.__a1 = a1
         self.__b1 = b1
         self.__c1 = c1
@@ -77,6 +83,7 @@ class Retta:
             return f"Le due rette sono coincidenti e quindi hanno tutti i punti in comune"
 
         else:
-            return f"Le due rette sono incidenti nel punto di coordinate: {((-self.__c / self.__b)+(self.__c1 / self.__b1))/((-self.__b / self.__a)+(self.__b1 / self.__a1))}, {((-self.__b / self.__c)+(self.__b1 / self.__c1))/((-self.__b / self.__a)+(self.__b1 / self.__a1))}"
+            intersezione = (((-self.__c / self.__b)+(self.__c1 / self.__b1))/((-self.__b / self.__a)+(self.__b1 / self.__a1)), ((-self.__b / self.__c)+(self.__b1 / self.__c1))/((-self.__b / self.__a)+(self.__b1 / self.__a1)))
+            return intersezione
 
 
