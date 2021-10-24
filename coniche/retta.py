@@ -8,16 +8,18 @@ class Retta:
             self.__m = p4
 
 
-    def __init__(self, x, y, x_2, y_2, equatio):
+    def __init__(self, x, y, x_2, y_2, punto1, punto2):
         self.__x = x
         self.__y = y
         self.__x_2 = x_2
         self.__y_2 = y_2
+        self.__p1 = punto1
+        self.__p2 = punto2
 
-    punto1 = Retta(self.__x, self.__y)
-    punto2 = Retta(self.__x_2, self.__y_2)
+    punto1 = (self.__x, self.__y)
+    punto2 = (self.__x_2, self.__y_2)
 
-    def get_retta:
+    def get_retta(self):
         if punto1 != 0 and punto2 != 0:
             return f'Equazione della retta: y=, {((self.__y_2-self.__y)/(self.__x_2-self.__x)*self.__x)}x + {(((self.__y_2-self.__y)/(self.__x_2-self.__x)*self.__x)-self.__y)}'
 
