@@ -1,27 +1,36 @@
 class Retta:
-    def __init__(self, tipo = "param", p1 = None, p2 = None, p3 = None, p4 = None):
-        if (tipo == "param"):
+    def __init__(self, tipo="param", p1=None, p2=None, p3=None, p4=None):
+        if tipo == "param":
             self.__a = p1
             self.__b = p2
             self.__c = p3
             self.__punti = []
             self.__m = p4
 
+        #Non siamo riusciti a finire questi metodi. Perché non abbiamo capito come trovare il parametro b a partire da un' equazione esplicita.
+        #elif(tipo == "punti"):
+            #self.__x = p1
+            #self.__y = p2
+            #self.__x2 = p3
+            #self.__y2 = p4
 
-    def __init__(self, x, y, x_2, y_2, punto1, punto2):
-        self.__x = x
-        self.__y = y
-        self.__x_2 = x_2
-        self.__y_2 = y_2
-        self.__p1 = punto1
-        self.__p2 = punto2
+        #punto1 = (self.__x, self.__y)
+        #punto2 = (self.__x2, self.__y2)
 
-    punto1 = (self.__x, self.__y)
-    punto2 = (self.__x_2, self.__y_2)
+        #m = int((self.__y2-self.__y)/(self.__x2-self.__x))
+        #q = int(-(m*self.__x))+self.__y
 
-    def get_retta(self):
-        if punto1 != 0 and punto2 != 0:
-            return f'Equazione della retta: y=, {((self.__y_2-self.__y)/(self.__x_2-self.__x)*self.__x)}x + {(((self.__y_2-self.__y)/(self.__x_2-self.__x)*self.__x)-self.__y)}'
+        #b = (m * q) / gcd(m, q)
+        #a = -m*b
+        #c = -q*b
+
+
+        #elif tipo == "coeff":
+            #self.__m = p4
+            #self.__x = p1
+            #self.__y = p2
+
+        #q = int(-(self.__m*self.__x))+self.__y
 
     def getA(self):
         return self.__a
@@ -39,6 +48,8 @@ class Retta:
             return f"{self.__a}x+{self.__b}y=0"
         elif self.__a==0:
             return f"{self.__b}y+{self.__c}=0"
+        else:
+            return f"{self.__a}x+{self.__b}y+{self.__c}"
 
     def eqEsplicita(self):
         if self.__b==0:
@@ -54,7 +65,7 @@ class Retta:
         y = ((-self.__a*x)/self.__b + (-self.__c/self.__b))
         return y
 
-    def punti(self, N, M, x):
+    def punti(self, N, M, x):#Da completare
         self.__N = N
         self.__M = M
 
@@ -79,10 +90,10 @@ class Retta:
         self.__c1 = c1
 
         if m1 == self.__m:
-            return f"Le due rette non hanno un punto di intersezione perché sono parallele"
+            return f"null"
 
         elif m1 == self.__m and (-self.__c/self.__b) == (-self.__c1/self.__b1):
-            return f"Le due rette sono coincidenti e quindi hanno tutti i punti in comune"
+            return self.__punti
 
         else:
             intersezione = (((-self.__c / self.__b)+(self.__c1 / self.__b1))/((-self.__b / self.__a)+(self.__b1 / self.__a1)), ((-self.__b / self.__c)+(self.__b1 / self.__c1))/((-self.__b / self.__a)+(self.__b1 / self.__a1)))
