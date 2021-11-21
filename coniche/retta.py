@@ -1,5 +1,5 @@
 class Retta:
-    def __init__(self, tipo="param", p1=None, p2=None, p3=None, p4=None):
+    def __init__(self, tipo = "param", p1 = None, p2 = None, p3 = None, p4 = None):
         if tipo == "param":
             self.__a = p1
             self.__b = p2
@@ -7,30 +7,25 @@ class Retta:
             self.__punti = []
             self.__m = p4
 
-        #Non siamo riusciti a finire questi metodi. Perché non abbiamo capito come trovare il parametro b a partire da un' equazione esplicita.
-        #elif(tipo == "punti"):
-            #self.__x = p1
-            #self.__y = p2
-            #self.__x2 = p3
-            #self.__y2 = p4
+        elif tipo == "punti":
+            self.__x = p1
+            self.__y = p2
+            self.__x2 = p3
+            self.__y2 = p4
+            self.__m = ((self.__y2-self.__y)/(self.__x2-self.__x))
+            self.__q = (-(m*self.__x))+self.__y
+            self.__b = 1
+            self.__a = -m
+            self.__c = -self.__q
 
-        #punto1 = (self.__x, self.__y)
-        #punto2 = (self.__x2, self.__y2)
-
-        #m = int((self.__y2-self.__y)/(self.__x2-self.__x))
-        #q = int(-(m*self.__x))+self.__y
-
-        #b = (m * q) / gcd(m, q)
-        #a = -m*b
-        #c = -q*b
-
-
-        #elif tipo == "coeff":
-            #self.__m = p4
-            #self.__x = p1
-            #self.__y = p2
-
-        #q = int(-(self.__m*self.__x))+self.__y
+        elif tipo == "coeff":
+            self.__m = p4
+            self.__x = p1
+            self.__y = p2
+            self.__q = (-(self.__m*self.__x))+self.__y
+            self.__b = 1
+            self.__a = -self.__m
+            self.__c = -self.__q
 
     def getA(self):
         return self.__a
@@ -65,7 +60,7 @@ class Retta:
         y = ((-self.__a*x)/self.__b + (-self.__c/self.__b))
         return y
 
-    def punti(self, N, M, x):#Da completare
+    def punti(self, N, M, x):
         self.__N = N
         self.__M = M
 
@@ -98,5 +93,3 @@ class Retta:
         else:
             intersezione = (((-self.__c / self.__b)+(self.__c1 / self.__b1))/((-self.__b / self.__a)+(self.__b1 / self.__a1)), ((-self.__b / self.__c)+(self.__b1 / self.__c1))/((-self.__b / self.__a)+(self.__b1 / self.__a1)))
             return intersezione
-
-
