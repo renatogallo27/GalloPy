@@ -25,3 +25,4 @@ class parabola:
 
     def direttrice(self, c2):
         self.__c2 = (-1-((self.__b*self.__b)-4*self.__a*sefl.__c))/4*self.__a
+        return self.__c2
