@@ -1,5 +1,5 @@
 class Retta:
-    def __init__(self, tipo = "param", p1 = None, p2 = None, p3 = None, p4 = None):
+    def __init__(self, tipo="param", p1=None, p2=None, p3=None, p4=None):
         if tipo == "param":
             self.__a = p1
             self.__b = p2
@@ -12,8 +12,8 @@ class Retta:
             self.__y = p2
             self.__x2 = p3
             self.__y2 = p4
-            self.__m = ((self.__y2-self.__y)/(self.__x2-self.__x))
-            self.__q = (-(m*self.__x))+self.__y
+            self.__m = ((self.__y2 - self.__y) / (self.__x2 - self.__x))
+            self.__q = (-(m * self.__x)) + self.__y
             self.__b = 1
             self.__a = -m
             self.__c = -self.__q
@@ -22,7 +22,7 @@ class Retta:
             self.__m = p4
             self.__x = p1
             self.__y = p2
-            self.__q = (-(self.__m*self.__x))+self.__y
+            self.__q = (-(self.__m * self.__x)) + self.__y
             self.__b = 1
             self.__a = -self.__m
             self.__c = -self.__q
@@ -32,32 +32,32 @@ class Retta:
 
     def getB(self):
         return self.__b
-    
+
     def getC(self):
         return self.__c
 
     def eqImplicita(self):
-        if self.__b==0:
+        if self.__b == 0:
             return f"{self.__a}x+{self.__c}=0"
-        elif self.__c==0:
+        elif self.__c == 0:
             return f"{self.__a}x+{self.__b}y=0"
-        elif self.__a==0:
+        elif self.__a == 0:
             return f"{self.__b}y+{self.__c}=0"
         else:
             return f"{self.__a}x+{self.__b}y+{self.__c}"
 
     def eqEsplicita(self):
-        if self.__b==0:
+        if self.__b == 0:
             return f"x={-self.__c}/{self.__a}"
-        elif self.__c==0:
+        elif self.__c == 0:
             return f"y={-self.__a}x/{self.__b}"
-        elif self.__a==0:
+        elif self.__a == 0:
             return f"y={-self.__c}/{self.__b}"
         else:
-            return f"y={-self.__a/self.__b}x+{-self.__c/self.__b}"
-        
+            return f"y={-self.__a / self.__b}x+{-self.__c / self.__b}"
+
     def trovaY(self, x, y):
-        y = ((-self.__a*x)/self.__b + (-self.__c/self.__b))
+        y = ((-self.__a * x) / self.__b + (-self.__c / self.__b))
         return y
 
     def punti(self, N, M, x):
@@ -66,7 +66,7 @@ class Retta:
 
         for self.__N in range(self.__M, x):
             tupla = (x, (-self.__a * x) / self.__b + (-self.__c / self.__b))
-            x = x+1
+            x = x + 1
             self.__punti.append(tupla)
             return f"Coordinate dei punti: {self.__punti}"
 
@@ -76,10 +76,10 @@ class Retta:
         elif self.__a == 0:
             return f"La retta è perpendicolare all'asse delle ascisse"
         else:
-            self.__m = -self.__a/self.__b
+            self.__m = -self.__a / self.__b
             return self.__m
 
-    def intersezione(self, a1, b1, c1, m1, intersezione = None):
+    def intersezione(self, a1, b1, c1, m1, intersezione=None):
         self.__a1 = a1
         self.__b1 = b1
         self.__c1 = c1
@@ -87,9 +87,11 @@ class Retta:
         if m1 == self.__m:
             return f"null"
 
-        elif m1 == self.__m and (-self.__c/self.__b) == (-self.__c1/self.__b1):
+        elif m1 == self.__m and (-self.__c / self.__b) == (-self.__c1 / self.__b1):
             return self.__punti
 
         else:
-            intersezione = (((-self.__c / self.__b)+(self.__c1 / self.__b1))/((-self.__b / self.__a)+(self.__b1 / self.__a1)), ((-self.__b / self.__c)+(self.__b1 / self.__c1))/((-self.__b / self.__a)+(self.__b1 / self.__a1)))
+            intersezione = (
+                ((-self.__c / self.__b) + (self.__c1 / self.__b1)) / ((-self.__b / self.__a) + (self.__b1 / self.__a1)),
+                ((-self.__b / self.__c) + (self.__b1 / self.__c1)) / ((-self.__b / self.__a) + (self.__b1 / self.__a1)))
             return intersezione
