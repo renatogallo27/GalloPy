@@ -7,6 +7,7 @@ class parabola:
             self.punti = []
 
         elif tipo == "fuocoDiret":  # da completare
+            pass
 
     def getA(self):
         return self.__a

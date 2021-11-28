@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76ae0ebd-ecb1-4e91-a14f-dbbbfd2fa7bd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/esercizi vari/provaPygame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coniche/parabola.py" beforeDir="false" afterPath="$PROJECT_DIR$/coniche/parabola.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coniche/retta.py" beforeDir="false" afterPath="$PROJECT_DIR$/coniche/retta.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
